@@ -59,60 +59,47 @@ public class Question {
 		
 //		5. int[] lotto = {6,12,33,4,5,26} * 배열의 값은 바뀔 수 있다.
 //			홀수인 로또 번호의 합을 구하시오.. 결과 : 33+5 = 38
-		int oddSum = 0;
 		boolean r0 = true;
 		int[] numbers = new int[2];
-		boolean r1 = lotto[0]%2==1;
-		boolean r2 = lotto[1]%2==1;
-		boolean r3 = lotto[2]%2==1;
-		boolean r4 = lotto[3]%2==1;
-		boolean r5 = lotto[4]%2==1;
-		boolean r6 = lotto[5]%2==1;
-		if(r0 == r1) {
-			oddSum += lotto[0];
+		if(r0 == (lotto[0]%2==1)) {
 			numbers[0] = lotto[0];
 		}
-		if(r0 == r2) {
-			oddSum += lotto[1];
+		if(r0 == (lotto[1]%2==1)) {
 			if(numbers[0]!=0) {
 				numbers[1] = lotto[1];
 			}else {
 				numbers[0] = lotto[1];
 			}
 		}
-		if(r0 == r3) {
-			oddSum += lotto[2];
+		if(r0 == (lotto[2]%2==1)) {
 			if(numbers[0]!=0) {
 				numbers[1] = lotto[2];
 			}else {
 				numbers[0] = lotto[2];
 			}
 		}
-		if(r0 == r4) {
-			oddSum += lotto[3];
+		if(r0 == (lotto[3]%2==1)) {
 			if(numbers[0]!=0) {
 				numbers[1] = lotto[3];
 			}else {
 				numbers[0] = lotto[3];
 			}
 		}
-		if(r0 == r5) {
-			oddSum += lotto[4];
+		if(r0 == (lotto[4]%2==1)) {
 			if(numbers[0]!=0) {
 				numbers[1] = lotto[4];
 			}else {
 				numbers[0] = lotto[4];
 			}
 		}
-		if(r0 == r6) {
-			oddSum += lotto[5];
+		if(r0 == (lotto[5]%2==1)) {
 			if(numbers[0]!=0) {
 				numbers[1] = lotto[5];
 			}else {
 				numbers[0] = lotto[5];
 			}
 		}
-		System.out.println(numbers[0] + "+" + numbers[1] + "=" + oddSum);
+		System.out.println(numbers[0] + "+" + numbers[1] + "=" + (numbers[0]+numbers[1]));
 		System.out.println("---------");
 		
 		
@@ -144,7 +131,7 @@ public class Question {
 				System.out.println(aa[0]);
 			}else if((aa3+aa4)>(aa5+aa6)) {
 				System.out.println(aa[1]);
-			}else  {
+			}else {
 				System.out.println(aa[2]);
 			}
 		
@@ -159,8 +146,8 @@ public class Question {
 //		총알에 맞는 새의 번호를 출력하시오.
 		int[] x = {6,5,9};
 		int[] y = {4,10,6};
-		int[] bird = {3,2};
-		double tanBullet = (bird[1]*1.0)/(bird[0]*1.0);
+		int[] bullet = {3,2};
+		double tanBullet = (bullet[1]*1.0)/(bullet[0]*1.0);
 		double tanBird1 = (y[0]*1.0)/(x[0]*1.0);
 		double tanBird2 = (y[1]*1.0)/(x[1]*1.0);
 		double tanBird3 = (y[2]*1.0)/(x[2]*1.0);
