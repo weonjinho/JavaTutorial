@@ -33,8 +33,10 @@ public class _00_basic {
 			point += 10;
 		}
 		System.out.println(point); // 이때 변경된 point값 정상출력
-		
 		System.out.println("----------");
+		
+		
+		
 		// 시나리오 2 타입2, 조건이 여러개 있는데, 이중에 하나를 선택.
 		// 키가 180 이상이면 A조, 170-179 B조, 170미만이면 c조
 		// step1 조건만든다
@@ -49,7 +51,6 @@ public class _00_basic {
 		}else if(cm1 < 170) {
 			System.out.println("C조");
 		}
-		
 		// 아래 if는 위 예제랑 비숫해 보이지만
 		// 단독 if가 세 개 이다. 즉 위에 if문 하고는 완전 다른 것이다.
 		if(cm1 >= 180) {
@@ -61,6 +62,7 @@ public class _00_basic {
 		if(cm1 < 170) {
 			System.out.println("C조");
 		}
+		
 		
 		
 		// 사나리오3 - 조건1에 참인 후에 다시 조건을 순차적으로 판별
@@ -77,10 +79,6 @@ public class _00_basic {
 			System.out.println("출석율 미달로 자격요건이 안됩니다.");
 		}
 
-		
-		
-		
-		
 	}
 
 }
