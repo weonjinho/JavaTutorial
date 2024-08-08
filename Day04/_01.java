@@ -21,7 +21,7 @@ public class _01 {
 //		System.out.println();
 //		for(int i=1;i<=5;i++) {
 //			System.out.print(a[i%5]+" ");
-////			작은수%큰수
+////			작은수%큰수 ==> 작은수
 //		}
 //		System.out.println();
 //		for(int i=0;i<=4;i++) {
@@ -76,7 +76,8 @@ public class _01 {
 				sum2 += a[i];		// 누적값 구하기
 				cnt2++;				// 조건에 맞는 값의 개수.
 			}
-			avg2 = (sum2*1.0)/(cnt2*1.0);	// 평균 구하기
+//			avg2 = (sum2*1.0)/(cnt2*1.0);	// 평균 구하기
+			avg2 = (double)sum2/cnt2;
 		}
 		System.out.println(cnt2);
 		System.out.println(avg2);
