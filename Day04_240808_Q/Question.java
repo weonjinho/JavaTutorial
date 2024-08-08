@@ -215,18 +215,60 @@ public class Question {
 //		   10. 987654321이라는 숫자가 있다.. 변수2개와 for문 한개로
 //		   모든 자릿수를 더한 합을 구하시오.. 9+8+7+6+5+4+3+2+1 = 합
 //		   합만 출력하면 됩니다.
-//		   main메서드 안의 라인수를 최소화 하여서 작성하세요. 최소 라인수로 작성하라는 의미입니다. 
-//		   int myNum = 987654321;
-//		   int[] numList = new int[9];
-//		   for(int i=0;i<9;i++) {
-//			   numList[i] = myNum%(10**(i+1));
-//		   }
-//		   System.out.println(Arrays.toString(numList));
-//		   
-//		   System.out.println("++++++++++");
+//		   main메서드 안의 라인수를 최소화 하여서 작성하세요. 최소 라인수로 작성하라는 의미입니다.
+		   int a = 987654321;
+		   int numSum3 = 0;
+		   System.out.print(a/100000000);
+		   for(int v = 10000000; v>=1; v/=10) {
+			   numSum3 += ((a/v)%10);
+			   System.out.print("+");
+			   System.out.print((a/v)%10);
+		   }
+		   System.out.println("=" + ((a/100000000) + numSum3));
 	
+//		   긴 숫자가 주어졌을때 원하는 숫자를 추출하는 방법(예제)
+//		   step1: 숫자의 길이를 본다, 이 숫자의 첫 번째 숫자를 얻고 싶다면, 숫자/(10*(length-1))를 하면 된다.
+//		   step2: 두번째 숫자 추출: 숫자/(10*(length-2)).
+//		   step3: 세번째 숫자 추출: 숫자/(10*(length-3)).
+//		   step4: 네번째 숫자 추출: 숫자/(10*(length-4)).
+//		   step5: 다섯번째 숫자 추출: 숫자/(10*(length-5)).
+//		   step6: 여섯번째 숫자 추출: 숫자/(10*(length-6)).
+//		   step7: 일곱번째 숫자 추출: 숫자/(10*(length-7)).
+//		   step8: 여덜번째 숫자 추출: 숫자/(10*(length-8)).
+//		   step9: 아홉번째 숫자 추출: 숫자/(10*(length-9)).
+		   int aaa = a/100000000;		// (a/10의8승)		// 9
+		   int bbb = (a/10000000)%10;	// (a/10의7승)%10	// 8
+		   int ccc = (a/1000000)%10;	// (a/10의6승)%10 	// 7
+		   int ddd = (a/100000)%10;		// (a/10의5승)%10	// 6
+		   int eee = (a/10000)%10;		// (a/10의4승)%10	// 5
+		   int fff = (a/1000)%10;		// (a/10의3승)%10	// 4
+		   int ggg = (a/100)%10;		// (a/10의2승)%10	// 3
+		   int hhh = (a/10)%10;			// (a/10의1승)%10	// 2
+		   int iii = (a/1)%10;			// (a/10의0승)%10	// 1
+		   System.out.println(aaa);
+		   System.out.println(bbb);
+		   System.out.println(ccc);
+		   System.out.println(ddd);
+		   System.out.println(eee);
+		   System.out.println(fff);
+		   System.out.println(ggg);
+		   System.out.println(hhh);
+		   System.out.println(iii);
 		   
-		   
+//		  그 값들을 배열로 받아봤다.
+//		  Tip : 중첩 for문 사용시 반복 횟수가 가장 작은 반복문을 가장 안쪽에 둔다.
+//		  이유 : 반복문은 조건식이 false 일때 반복문을 빠져나가기 때문이다. 
+	      int aa = 987654321;
+	      int b = 0;
+	      int[] numContainer = new int[9];
+	      for(int v=10000000; v>=1; v/=10) {   // 10단위로 나눈다.
+	         for(int i=0; i<9; i++) {
+	             b=(aa/v)%10;
+	             numContainer[i]=b;
+	         }
+	      }
+	      System.out.println("---");
+	      System.out.println(Arrays.toString(numContainer));
 		   
 		   
 		   
