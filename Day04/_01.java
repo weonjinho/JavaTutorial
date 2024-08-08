@@ -57,10 +57,10 @@ public class _01 {
 			if(a[i]>=50) {
 				cnt++;
 			}
-			avg = (sum*1.0)/(cnt*1.0);
+			avg = (sum*1.0)/(cnt*1.0);	// 평균값 구하기.
 		}
 		System.out.println(avg);
-//		System.out.println((double)sum/cnt);
+//		System.out.println((double)sum/cnt);	// [주의] 케스팅을 적극 활용하도록!!!
 		System.out.println("------");
 		
 //		3. 평균을 구하시오 단, 최저 점수는 포함하지마시오.
@@ -69,14 +69,14 @@ public class _01 {
 		int minValue = 100;
 		double avg2 = 0.0;
 		for(int i=0; i<5; i++) {
-			if(a[i]<minValue) {
+			if(a[i]<minValue) {	// 최소값 찾기.
 				minValue = a[i];
 			}
-			if(a[i]!=minValue) {
-				sum2 += a[i];
-				cnt2++;
+			if(a[i]!=minValue) {	
+				sum2 += a[i];		// 누적값 구하기
+				cnt2++;				// 조건에 맞는 값의 개수.
 			}
-			avg2 = (sum2*1.0)/(cnt2*1.0);
+			avg2 = (sum2*1.0)/(cnt2*1.0);	// 평균 구하기
 		}
 		System.out.println(cnt2);
 		System.out.println(avg2);
