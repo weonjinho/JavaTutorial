@@ -48,7 +48,7 @@ public class _01 {
 			}
 		}
 		System.out.println(sum);
-		
+		System.out.println("------");
 	
 //		2. 평균을 구하시오 단, 50점 이상만.
 		int cnt = 0;
@@ -60,7 +60,7 @@ public class _01 {
 			avg = (sum*1.0)/(cnt*1.0);
 		}
 		System.out.println(avg);
-		
+//		System.out.println((double)sum/cnt);
 		System.out.println("------");
 		
 //		3. 평균을 구하시오 단, 최저 점수는 포함하지마시오.
