@@ -1,6 +1,6 @@
 package Day03_240807_02if;
 
-public class _00_basic {
+public class Day03_basic {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

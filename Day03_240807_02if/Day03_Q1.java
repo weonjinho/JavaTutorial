@@ -1,6 +1,6 @@
 package Day03_240807_02if;
 
-public class _00_Q1 {
+public class Day03_Q1 {
 
 	public static void main(String[] args) {
 //		Basic
