@@ -2,7 +2,7 @@ package Day02_240806_Q;
 
 import java.util.Arrays;
 
-public class Question {
+public class Day02_Question {
 
 	public static void main(String[] args) {
 //		기본
