@@ -1,6 +1,6 @@
 package Day02_240806_01Array;
 
-public class _00_BasicArray {
+public class Day02_BasicArray {
 	public static void main(String[] args) {
 		// 내용 : 자바의 배열
 		/*

@@ -1,4 +1,4 @@
-package Day01_240805_00변수;
+package Day01_240805_Q;
 
 public class Test02 {
 
