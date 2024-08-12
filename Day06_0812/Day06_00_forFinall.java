@@ -54,6 +54,8 @@ public class Day06_00_forFinall {
 		// 6. maxIndex = i;(현재 최대값의i (index))
 		// 중요도: 1. 과정  2. 구현방법
 		
+		
+		
 		// 문제12 과정
 		// 응용을 많이 할수 있는 예제입니다.
 		// 1. for문 작성 : for(int i=0;i<arr.length;i++){};
@@ -68,7 +70,6 @@ public class Day06_00_forFinall {
 		int cnt = 0;
 		int maxLength = 0;
 		for(int i=0;i<arr.length;i++) {
-//			System.out.println("현재번호: "+arr[i]);
 			if(arr[i]==0) {		// A if절:터널타운딩
 				cnt++;
 			}else {
@@ -87,19 +88,20 @@ public class Day06_00_forFinall {
 		int[] arr2 = {1,2,3,0,0,0,1,2,3,4,5,2,2,2,2,0,0,0,0,0,3,3};
 //				  cnt{1,1,1,1,2,3,1,1,1,1,1,1,2,3,4,1,2,3,4,5,1,2};
 		int cnt2 = 0;
-		int bT = arr[0];
+		int bT = arr2[0];
 		int maxlength = 0;
 		int maxIndex = 0;
-		for(int i=0;i<arr.length;i++) {
-			if(arr[i]==bT) {	// 연속으로 같은게 있을때.
-				cnt++;
+		for(int i=1;i<arr2.length;i++) {
+			if(arr2[i]==bT) {	// 연속으로 같은게 있을때. 현재값이 이전값과 같을때.
+				cnt2++;
+				System.out.println("cnt2: "+cnt2);
 			}else {
-				cnt=1;			// 한개만 있을때.
-				bT = arr[i];
-				System.out.println(i+"/"+cnt);
+				cnt2=1;			// 한개만 있을때.
+				bT = arr2[i];
+				System.out.println(i+"/"+"cnt2: "+cnt2);
 			}
 			if(maxlength<cnt2) {
-				maxlength=cnt;
+				maxlength=cnt2;
 				maxIndex=bT;	// 현재 터널의 번호.
 			}
 		}
