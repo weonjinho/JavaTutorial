@@ -18,9 +18,12 @@ public class _01_Test {
 		for(int i=0;i<lotto.length;i++) {
 			System.out.println((i+1)+"번 입력하세요.");
 			int k=in.nextInt();	// nextInt는 키보드로 숫자만 가져온다.
-			in.nextLine();	// 버퍼 지우기. 버퍼 : 임시 기억장소.
+//			in.nextLine();	// 버퍼 지우기. 버퍼 : 임시 기억장소.
 			lotto[i] = k;	
 		}
+		
+		// Scanner로 입력 받을때 버퍼지우기도 고래해야한다.
+		
 		// 로또 번호를 출력하는 반복문
 		for(int i=0;i<lotto.length;i++) {
 			if(i==lotto.length-1) {
