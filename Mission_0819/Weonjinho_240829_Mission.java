@@ -259,6 +259,7 @@ public class Weonjinho_240829_Mission {
 		int hundred=0;
 		int ten=0;
 		int times = 3;
+//		
 //		thousand = (change/1000)%10;
 //		hundred = (change/100)%10;
 //		ten = (change/10)%10;
@@ -278,6 +279,7 @@ public class Weonjinho_240829_Mission {
 				}
 			}
 		}
+		System.out.println("거스름돈: "+change);
 		System.out.println("천원"+thousand+"개"+" 백원"+hundred+"개"+" 십원"+ten+"개");
 		System.out.println();
 		
