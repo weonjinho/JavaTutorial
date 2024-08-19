@@ -2,7 +2,7 @@ package Mission_0819;
 
 import java.util.Arrays;
 
-public class Weonjinho_240829_Mission {
+public class Weonjinho_240829_Mission2 {
 
 	public static void main(String[] args) {
 //		<1-6> 필수 코스 -------------------------------------
@@ -46,44 +46,6 @@ public class Weonjinho_240829_Mission {
 //		00***
 //		0*****
 //		*******
-//		Tip: 한줄씩 생각하세요.
-//		플이과정용(원진호.ver)
-//		for(int i=0;i<4;i++) {
-//			if(i==0) {
-//				for(int j=0;j<i+3;j++) {
-//					if(j==0 || j==1 || j==2) {
-//						System.out.print("0");
-//					}else {
-//						System.out.print("*");
-//					}
-//				}
-//			}
-//			if(i==1) {
-//				for(int j=0;j<i+3;j++) {
-//					if(j==0 || j==1 ) {
-//						System.out.print("0");
-//					}else {
-//						System.out.print("*");
-//					}
-//				}
-//			}
-//			if(i==2) {
-//				for(int j=0;j<i+3;j++) {
-//					if(j==0) {
-//						System.out.print("0");
-//					}else {
-//						System.out.print("*");
-//					}
-//				}
-//			}
-//			if(i>2) {
-//				for(int j=0;j<i+3;j++) {
-//					System.out.print("*");
-//				}
-//			}
-//			System.out.println("*");
-//		}
-//		제출용.
 		System.out.println("===== 3번 문제 =====");
 		for(int i=0;i<4;i++) {
 			for(int j=0;j<i+3;j++) {
@@ -125,44 +87,6 @@ public class Weonjinho_240829_Mission {
 //		0*****
 //		00***
 //		000*
-//		Tip : 한줄씩 생각하자!
-//		풀이과정용(원진호.ver)
-//		for(int i=0;i<4;i++) {
-//			if(i==0) {
-//				for(int j=7;j>i;j--) {
-//					System.out.print("*");
-//				}
-//			}
-//			if(i==1){
-//				for(int j=7;j>i;j--) {
-//					if(j==7) {
-//						System.out.print("0");
-//					}else {
-//						System.out.print("*");
-//					}
-//				}
-//			}
-//			if(i==2) {
-//				for(int j=7;j>i;j--) {
-//					if(j==7 || j==6) {
-//						System.out.print("0");
-//					}else {
-//						System.out.print("*");
-//					}
-//				}
-//			}
-//			if(i==3) {
-//				for(int j=7;j>i;j--) {
-//					if(j==7 || j==6 || j==5) {
-//						System.out.print("0");
-//					}else {
-//						System.out.print("*");
-//					}
-//				}
-//			}
-//			System.out.println();
-//		}
-//		제출용.
 		System.out.println("===== 4번 문제 =====");
 		for(int i=0;i<4;i++) {
 			for(int j=7;j>i;j--) {
@@ -246,7 +170,6 @@ public class Weonjinho_240829_Mission {
 		
 		
 //		upgrade -------------------------------
-//		
 //		7. 거스름돈 구하기   10000원짜리 0개, 1000원짜리 0 개, 100짜리 0개, 10짜리 0개,   조건 : /나 %연산자는 각각 최대 두 번씩 사용가능
 //		   단, 거스름돈은 만천원이 최대 값이다. 
 //		int money=4570;  // 가격
@@ -259,10 +182,6 @@ public class Weonjinho_240829_Mission {
 		int hundred=0;
 		int ten=0;
 		int times = 3;
-//		규칙 출처: Day04_240808_Q 패키지의 Question.java
-//		thousand = (change/1000)%10;
-//		hundred = (change/100)%10;
-//		ten = (change/10)%10;
 		double number = Math.pow(10, times);	// 제곱 메소드, 리턴타입:double.
 		int intNum = (int)number;
 		for(int i=0;i<4;i++) {
@@ -293,23 +212,7 @@ public class Weonjinho_240829_Mission {
 //		가로에 같은 캐릭터가 3개 이상이면 제거 대상이다.
 //		제거 대상 캐릭터 번호와 갯수, 시작위치 인덱스를 모두 출력하시오.
 		System.out.println("===== 8번 문제 ? =====");
-		int[] pang={1,0,0,0,2,3,4,4,6,2,2,2,2,5};
-		int cntSame = 0;
-		int bT = pang[0];
-		for(int i=0;i<pang.length;i++) {
-			if(bT == pang[i]) {
-				cntSame++;
-			}else {
-				bT = pang[i];
-				cntSame = 1;
-			}
-			if(cntSame >= 3) {
-				System.out.println("제거 대상 번호: "+bT);
-				System.out.println("제거 대상 갯수: "+cntSame);
-				System.out.println("시작 위치: "+((i-cntSame)+1));
-			}
-		}
-		System.out.println();
+		
 		
 		
 		
@@ -320,27 +223,6 @@ public class Weonjinho_240829_Mission {
 //		 String ttt ="aabbbcccaaaaddbbbaaaaa";
 		String ttt ="aabbbcccaaaaddbbbaaaaa";
 		System.out.println("===== 9번 문제 ? =====");
-		// 터널의 개수
-		char cText = ttt.charAt(0);
-		int diffCnt = 0;
-		for(int i=0;i<ttt.length();i++) {
-			if(cText != ttt.charAt(i)) {
-				diffCnt++;
-				cText = ttt.charAt(i);
-			}
-		}
-		System.out.println("diffCnt: "+diffCnt);	// 터널의 개수
-		int[] tunnelLength = new int[diffCnt+1];
-		char text = ttt.charAt(0);
-		for(int i=0;i<ttt.length();i++) {
-			if(text == ttt.charAt(i)) {
-				for(int j=0;j<tunnelLength.length;j++) {
-					tunnelLength[j]++;				// 터널별 길이를 1씩 증가.
-				}
-			}
-		}
-		System.out.println("tunnelLength: "+Arrays.toString(tunnelLength));
-		System.out.println();
 		
 		
 
@@ -355,22 +237,6 @@ public class Weonjinho_240829_Mission {
 //		size 설정값에 따라 공터에 건물을 지을 수 있는 위치는 모두 몇개인가?
 //		size가 2일경우에 7개이다. 
 		System.out.println("===== 10번 문제 ? =====");
-		int[] arr = {1,0,0,0,1,1,1,0,0,0,0,1,1,1,1,0,0,0,1};
-		int emptyCnt = 0;
-		int buildingCnt = 0;
-		int size = 2;
-		for(int i=0;i<arr.length;i++) {
-			if(arr[i]==0) {
-				emptyCnt++;
-			}else {
-				emptyCnt=0;
-			}
-			if(emptyCnt >= size) {
-				buildingCnt++;
-			}
-		}
-		System.out.println(buildingCnt+" 개 건물을 지을수 있다.");
-		System.out.println();
 		
 		
 		
@@ -385,72 +251,6 @@ public class Weonjinho_240829_Mission {
 //		00***
 //		000*
 		System.out.println("===== 11번 문제 =====");
-//		풀이과정(원진호.ver)		
-//		for(int i=0;i<8;i++) {
-//			if(i==0) {						// 4개
-//				for(int j=0;j<i+4;j++) {
-//					if(j==0 || j==1 || j==2) {
-//						System.out.print("0");
-//					}else {
-//						System.out.print("*");
-//					}
-//				}
-//			}
-//			if(i==1) {						// 5개
-//				for(int j=0;j<i+4;j++) {
-//					if(j==0 || j==1) {
-//						System.out.print("0");
-//					}else {
-//						System.out.print("*");
-//					}
-//				}
-//			}
-//			if(i==2) {						// 6개
-//				for(int j=0;j<i+4;j++) {
-//					if(j==0) {
-//						System.out.print("0");
-//					}else {
-//						System.out.print("*");
-//					}
-//				}
-//			}
-//			if(i==3) {						// 7개
-//				for(int j=0;j<i+4;j++) {
-//					System.out.print("*");
-//				}
-//			}
-////	--------------------------------------------------------------
-//			if(i==4) {						// 6개
-//				for(int j=7;j>i-3;j--) {
-//					if(j==7) {
-//						System.out.print("0");
-//					}else {
-//						System.out.print("*");
-//					}
-//				}
-//			}
-//			if(i==5) {						// 5개
-//				for(int j=7;j>i-3;j--) {
-//					if(j==7 || j==6) {
-//						System.out.print("0");
-//					}else {
-//						System.out.print("*");
-//					}
-//				}
-//			}
-//			if(i==6) {						// 4개
-//				for(int j=7;j>i-3;j--) {
-//					if(j==7 || j==6 || j==5) {
-//						System.out.print("0");
-//					}else {
-//						System.out.print("*");
-//					}
-//				}
-//			}
-//			System.out.println();
-//		}
-		
-//		제출용.
 		for(int i=0;i<8;i++) {
 			if(i<=3) {
 				for(int j=0;j<i+4;j++) {
