@@ -2,7 +2,7 @@ package Mission_0819;
 
 import java.util.Arrays;
 
-public class Mission {
+public class Weonjinho_240829_Mission {
 
 	public static void main(String[] args) {
 //		<1-6> 필수 코스 -------------------------------------
@@ -19,6 +19,9 @@ public class Mission {
 			System.out.println();
 		}
 		System.out.println();
+		
+		
+		
 		
 //		2. 
 //		*****
@@ -43,9 +46,7 @@ public class Mission {
 //		00***
 //		0*****
 //		*******
-		
 //		Tip: 한줄씩 생각하세요.
-		
 //		플이과정용(원진호.ver)
 //		for(int i=0;i<4;i++) {
 //			if(i==0) {
@@ -82,7 +83,6 @@ public class Mission {
 //			}
 //			System.out.println("*");
 //		}
-		
 //		제출용.
 		System.out.println("===== 3번 문제 =====");
 		for(int i=0;i<4;i++) {
@@ -117,14 +117,15 @@ public class Mission {
 		System.out.println();
 		
 		
+		
+		
+		
 //		4. 
 //		*******
 //		0*****
 //		00***
 //		000*
-		
-//		한줄씩 생각하자!
-		
+//		Tip : 한줄씩 생각하자!
 //		풀이과정용(원진호.ver)
 //		for(int i=0;i<4;i++) {
 //			if(i==0) {
@@ -161,7 +162,6 @@ public class Mission {
 //			}
 //			System.out.println();
 //		}
-		
 //		제출용.
 		System.out.println("===== 4번 문제 =====");
 		for(int i=0;i<4;i++) {
@@ -195,6 +195,10 @@ public class Mission {
 		}
 		System.out.println();
 		
+		
+		
+		
+		
 //		5. int[] a ={34,55,23,56,34,45,34};
 //		40보다 큰 수는 모두 몇개인가?
 		System.out.println("===== 5번 문제 =====");
@@ -207,6 +211,11 @@ public class Mission {
 		}
 		System.out.println("40보다 큰 수는"+cnt+"개 있습니다.");
 		System.out.println();
+		
+		
+		
+		
+		
 		
 //		6
 //		int[] a ={34,55,23,56,34,45,34};
@@ -231,13 +240,17 @@ public class Mission {
 		}
 		System.out.println();
 
+		
+		
+		
+		
+		
 //		upgrade -------------------------------
 //		
 //		7. 거스름돈 구하기   10000원짜리 0개, 1000원짜리 0 개, 100짜리 0개, 10짜리 0개,   조건 : /나 %연산자는 각각 최대 두 번씩 사용가능
 //		   단, 거스름돈은 만천원이 최대 값이다. 
 //		int money=4570;  // 가격
 //		int pay = 10000;  //지불금액
-		
 		System.out.println("===== 7번 문제 =====");
 		int money=4570;
 		int pay = 10000;
@@ -249,10 +262,8 @@ public class Mission {
 //		thousand = (change/1000)%10;
 //		hundred = (change/100)%10;
 //		ten = (change/10)%10;
-			
 		double number = Math.pow(10, times);
 		int intNum = (int)number;
-		
 		for(int i=0;i<4;i++) {
 			for(int j=3;j>0;j--) {
 				number = Math.pow(10, j);
@@ -270,15 +281,15 @@ public class Mission {
 		System.out.println("천원"+thousand+"개"+" 백원"+hundred+"개"+" 십원"+ten+"개");
 		System.out.println();
 		
+		
+		
+		
+		
 //		8.
 //		int[] pang={1,0,0,0,2,3,4,4,6,2,2,2,2,5}   -이중 for  사용
 //		애니팡 게임의 일부분인다. 게임의 캐릭터는 숫자로 구분한다.
 //		가로에 같은 캐릭터가 3개 이상이면 제거 대상이다.
 //		제거 대상 캐릭터 번호와 갯수, 시작위치 인덱스를 모두 출력하시오.
-		// 제거 대상 번호
-		// 제거 대상 갯수
-		// 시작위치 인덱스
-		
 		System.out.println("===== 8번 문제 ? =====");
 		int[] pang={1,0,0,0,2,3,4,4,6,2,2,2,2,5};
 		int cntSame = 0;
@@ -301,10 +312,11 @@ public class Mission {
 		
 		
 		
+		
+		
 //		9. 가장 긴 터널의 알파벳 이름과 숫자를 찾으세요 <이중For사용>
 //		 String ttt ="aabbbcccaaaaddbbbaaaaa";
 		String ttt ="aabbbcccaaaaddbbbaaaaa";
-		
 		System.out.println("===== 9번 문제 ? =====");
 		// 터널의 개수
 		char cText = ttt.charAt(0);
@@ -316,7 +328,6 @@ public class Mission {
 			}
 		}
 		System.out.println("diffCnt: "+diffCnt);	// 터널의 개수
-		
 		int[] tunnelLength = new int[diffCnt+1];
 		char text = ttt.charAt(0);
 		for(int i=0;i<ttt.length();i++) {
@@ -326,12 +337,13 @@ public class Mission {
 				}
 			}
 		}
-		
 		System.out.println("tunnelLength: "+Arrays.toString(tunnelLength));
 		System.out.println();
 		
 		
 
+		
+		
 	
 //		10 난건물주  <이중For사용>
 //		int[] arr = {1,0,0,0,1,1,1,0,0,0,0,1,1,1,1,0,0,0,1}
@@ -340,7 +352,6 @@ public class Mission {
 //		size는 건물의 크기 이다. 건물은 하나만 짓는다. 공터는 연속적으로 있어야 한다. 
 //		size 설정값에 따라 공터에 건물을 지을 수 있는 위치는 모두 몇개인가?
 //		size가 2일경우에 7개이다. 
-		
 		System.out.println("===== 10번 문제 ? =====");
 		int[] arr = {1,0,0,0,1,1,1,0,0,0,0,1,1,1,1,0,0,0,1};
 		int emptyCnt = 0;
@@ -361,6 +372,8 @@ public class Mission {
 		
 		
 		
+		
+		
 //		11.
 //		000*
 //		00***
@@ -371,21 +384,6 @@ public class Mission {
 //		000*
 		System.out.println("===== 11번 문제 =====");
 //		풀이과정(원진호.ver)		
-//		for(int i=0;i<7;i++) {
-//			if(i<3) {
-//				for(int j=0;j<i+4;j++) {
-//					System.out.print("*");
-//				}
-//			}
-//			if(i>=3) {
-//				for(int j=6;j+4>i;j--) {
-//					System.out.print("*");
-//				}
-//			}
-//			
-//			System.out.println();
-//		}
-//	--------------------------------------------------------------------------------
 //		for(int i=0;i<8;i++) {
 //			if(i==0) {						// 4개
 //				for(int j=0;j<i+4;j++) {
@@ -421,7 +419,7 @@ public class Mission {
 //			}
 ////	--------------------------------------------------------------
 //			if(i==4) {						// 6개
-//				for(int j=7;j>1;j--) {
+//				for(int j=7;j>i-3;j--) {
 //					if(j==7) {
 //						System.out.print("0");
 //					}else {
@@ -430,7 +428,7 @@ public class Mission {
 //				}
 //			}
 //			if(i==5) {						// 5개
-//				for(int j=7;j>2;j--) {
+//				for(int j=7;j>i-3;j--) {
 //					if(j==7 || j==6) {
 //						System.out.print("0");
 //					}else {
@@ -439,7 +437,7 @@ public class Mission {
 //				}
 //			}
 //			if(i==6) {						// 4개
-//				for(int j=7;j>3;j--) {
+//				for(int j=7;j>i-3;j--) {
 //					if(j==7 || j==6 || j==5) {
 //						System.out.print("0");
 //					}else {
@@ -450,27 +448,104 @@ public class Mission {
 //			System.out.println();
 //		}
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+//		제출용.
+		for(int i=0;i<8;i++) {
+			if(i<=3) {
+				for(int j=0;j<i+4;j++) {
+					if(i==0) {
+						if(j==0 || j==1 || j==2) {
+							System.out.print("0");
+						}else {
+							System.out.print("*");
+						}
+					}
+					if(i==1) {
+						if(j==0 || j==1) {
+							System.out.print("0");
+						}else {
+							System.out.print("*");
+						}
+					}
+					if(i==2) {
+						if(j==0) {
+							System.out.print("0");
+						}else {
+							System.out.print("*");
+						}
+					}
+					if(i==3) {
+						System.out.print("*");
+					}
+				}
+			}else if(i>3) {
+				for(int j=7;j>i-3;j--) {
+					if(i==4) {
+						if(j==7) {
+							System.out.print("0");
+						}else {
+							System.out.print("*");
+						}
+					}
+					if(i==5) {
+						if(j==7 || j==6) {
+							System.out.print("0");
+						}else {
+							System.out.print("*");
+						}
+					}
+					if(i==6) {
+						if(j==7 || j==6 || j==5) {
+							System.out.print("0");
+						}else {
+							System.out.print("*");
+						}
+					}
+				}
+			}
+			System.out.println();
+		}
 		System.out.println("===================");
 		
+		
+		
+		
+		
 //		12. 9번 문제에서 for문 2개만 사용하기 if문은 갯 수 상관없음.
-		System.out.println("===== 12번 문제 =====");
+		System.out.println("===== 12번 문제 ? =====");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }
