@@ -12,9 +12,10 @@ public class Weonjinho_240829_Mission {
 //		3*1=3  3*2=6   3*3=9
 //		4*1=4  4*2=8   4*3=12
 		System.out.println("===== 1번 문제 =====");
-		for(int i=0;i<4;i++) {
+//		면접시 손코딩으로 나왔던 문제.
+		for(int i=1;i<5;i++) {
 			for(int j=1;j<4;j++) {
-				System.out.print((i+1)+"*"+j+"="+((i+1)*j)+" ");
+				System.out.print(i+"*"+j+"="+(i*j)+" ");
 			}
 			System.out.println();
 		}
@@ -30,8 +31,21 @@ public class Weonjinho_240829_Mission {
 //		**
 //		*
 		System.out.println("===== 2번 문제 =====");
+		// 2중 for 문: 
+		// 정의: i 가 1번 반복할때, j 는 n 번 반복한다.
+		// i: 줄찍는것.
+		// j: 열찍는것.
+		// 수식: 단서는 i 값을 찾는것.
+		// i=0 j=4
+		// i=1 j=3
+		// i=2 j=2
+		// i=3 j=1
+		// i=4 j=0
+		// ---> 4-i
+		// for(int j=0;j<=4-i;j++){};
 		for(int i=0;i<5;i++) {
-			for(int j=5;j>i;j--) {
+//			for(int j=5;j>i;j--) {
+			for(int j=0;j<=4-i;j++){
 				System.out.print("*");
 			}
 			System.out.println();
@@ -85,39 +99,48 @@ public class Weonjinho_240829_Mission {
 //		}
 //		제출용.
 		System.out.println("===== 3번 문제 =====");
+//		for(int i=0;i<4;i++) {
+//			for(int j=0;j<i+4;j++) {
+//				if(i==0) {
+//					if(j==0 || j==1 || j==2) {
+//						System.out.print("0");
+//					}else {
+//						System.out.print("*");
+//					}
+//				}
+//				if(i==1) {
+//					if(j==0 || j==1) {
+//						System.out.print("0");
+//					}else {
+//						System.out.print("*");
+//					}
+//				}
+//				if(i==2) {
+//					if(j==0) {
+//						System.out.print("0");
+//					}else {
+//						System.out.print("*");
+//					}
+//				}
+//				if(i>2) {
+//					System.out.print("*");
+//				}
+//			}
+//			System.out.println("*");
+//		}
+//		System.out.println();
+		// 방법2: 
 		for(int i=0;i<4;i++) {
-			for(int j=0;j<i+3;j++) {
-				if(i==0) {
-					if(j==0 || j==1 || j==2) {
-						System.out.print("0");
-					}else {
-						System.out.print("*");
-					}
-				}
-				if(i==1) {
-					if(j==0 || j==1) {
-						System.out.print("0");
-					}else {
-						System.out.print("*");
-					}
-				}
-				if(i==2) {
-					if(j==0) {
-						System.out.print("0");
-					}else {
-						System.out.print("*");
-					}
-				}
-				if(i>2) {
-					System.out.print("*");
-				}
+			for(int j=0;j<i+4;j++) {
+//				if(j >= 4-i-1) {
+//					System.out.print("*");
+//				}else {
+//					System.out.print("0");
+//				}
+				System.out.print("*");
 			}
-			System.out.println("*");
+			System.out.println();
 		}
-		System.out.println();
-		
-		
-		
 		
 		
 //		4. 
@@ -293,55 +316,43 @@ public class Weonjinho_240829_Mission {
 //		가로에 같은 캐릭터가 3개 이상이면 제거 대상이다.
 //		제거 대상 캐릭터 번호와 갯수, 시작위치 인덱스를 모두 출력하시오.
 		System.out.println("===== 8번 문제 ? =====");
-		int[] pang={1,0,0,0,2,3,4,4,6,2,2,2,2,5};
-		int cntSame = 0;
-		int bT = pang[0];
-		for(int i=0;i<pang.length;i++) {
-			if(bT == pang[i]) {
-				cntSame++;
-			}else {
-				bT = pang[i];
-				cntSame = 1;
-			}
-			if(cntSame >= 3) {
-				System.out.println("제거 대상 번호: "+bT);
-				System.out.println("제거 대상 갯수: "+cntSame);
-				System.out.println("시작 위치: "+((i-cntSame)+1));
-			}
-		}
-		System.out.println();
 		
 		
 		
 		
 		
 		
-//		9. 가장 긴 터널의 알파벳 이름과 숫자를 찾으세요 <이중For사용>
+		
+//		9. 가장 긴 터널의 알파벳 이름과 숫자를 찾으세요 <이중For사용> ***
 //		 String ttt ="aabbbcccaaaaddbbbaaaaa";
+//		탐색 기능에서 자주사용한다.
 		String ttt ="aabbbcccaaaaddbbbaaaaa";
 		System.out.println("===== 9번 문제 ? =====");
-		// 터널의 개수
-		char cText = ttt.charAt(0);
-		int diffCnt = 0;
+	
+		// 1. a중에 가장 긴 a?	i=는 a문자열의 index *
+		// 번수 : maxCnt : a길이중 가장 긴길이
+		//		    cnt : 현재의 a길이.
+		int maxCnt = 0;
+		int cnt3 = 0;
 		for(int i=0;i<ttt.length();i++) {
-			if(cText != ttt.charAt(i)) {
-				diffCnt++;
-				cText = ttt.charAt(i);
-			}
-		}
-		System.out.println("diffCnt: "+diffCnt);	// 터널의 개수
-		int[] tunnelLength = new int[diffCnt+1];
-		char text = ttt.charAt(0);
-		for(int i=0;i<ttt.length();i++) {
-			if(text == ttt.charAt(i)) {
-				for(int j=0;j<tunnelLength.length;j++) {
-					tunnelLength[j]++;				// 터널별 길이를 1씩 증가.
+			char temp = ttt.charAt(i);
+			cnt3 = 0;	// cnt는 0으로 초기화한다.
+			if(temp=='a') {
+				for(int j=i;j<ttt.length();j++) {  // j 의 시각점이 i 이다. ***
+					if(ttt.charAt(j)!='a') {
+						break;
+					}else {
+						cnt3++;
+					}
+				}// i 값 위치를 시작으로 연속된 a 의 길이.
+				if(maxCnt < cnt3) {
+					maxCnt = cnt3;
 				}
+				i = i+cnt3-1;// 현재 count한 만큼 i를 빼준다. i++이 있기에 -1를 해준다. ***(필요!)
 			}
 		}
-		System.out.println("tunnelLength: "+Arrays.toString(tunnelLength));
-		System.out.println();
-		
+		System.out.println("최대길이: "+maxCnt);
+		System.out.println("현재 a의 길이: "+cnt3 );
 		
 
 		
@@ -512,7 +523,7 @@ public class Weonjinho_240829_Mission {
 		
 		
 		
-//		12. 9번 문제에서 for문 2개만 사용하기 if문은 갯 수 상관없음.
+//		12. 11번 문제에서 for문 2개만 사용하기 if문은 갯 수 상관없음.
 		System.out.println("===== 12번 문제 ? =====");
 		
 		
