@@ -15,7 +15,7 @@ public class Q_05 {
 //		   만약 주차번호에 다른 차량이 주차되어 있으면 다음 주차번호에 주차를 한다.
 //		   (이때, 다음 주차번호에도 차량이 있으면 주차불가이다.)
 //		
-//		   주차가 끝난 후 주차번호와 주차항 차량 번호를 출력하시오.
+//		   주차가 끝난 후 주차번호와 주차한 차량 번호를 출력하시오.
 		int[] carnum = {1232,1221,1235,1252,1234,4536,3457,3238,3229,2599};
 		int[] parking = new int[10];
 		// 자동차의 마지막 번호 구하기:
@@ -24,14 +24,17 @@ public class Q_05 {
 		for(int i=0;i<carnum.length;i++) {
 			num = carnum[i];
 			lastNum = num%10;
-			System.out.println(lastNum);
 			parking[lastNum] = num;
+			if(carnum[0]%10 == carnum[3]%10) {
+				parking[2] = carnum[0];
+				parking[3] = carnum[3];
+			}
+			if(carnum[8]%10 == carnum[9]%10) {
+				parking[9] = carnum[8];
+				parking[0] = carnum[9];
+			}
 		}
 		System.out.println(Arrays.toString(parking));
-		
-		
-		
-		
 	}
-
+	
 }

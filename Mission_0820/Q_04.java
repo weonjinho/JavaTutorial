@@ -17,29 +17,18 @@ public class Q_04 {
 		int maxNum = 0;
 		for(int i=0;i<b.length;i++) {
 			if(maxNum < b[i]) {
-				maxNum = b[i];
-				int temp = 0;
-				temp = b[b.length-1];
+				maxNum = b[i];					// 최대값
+				int temp = b[b.length-1];
 				b[b.length-1] = b[i];
 				b[i] = temp;
 			}
 		}
 		System.out.println(Arrays.toString(b));
+		
+		
+		
 		// 2.
-		int maxNum2 = 0;
-		int num = 0;
-		for(int i=0;i<b.length-1;i++) {
-			if(maxNum2 < b[i]) {
-				maxNum2 = b[i];
-				num = b[b.length-2];
-				int temp = b[i];
-				b[i] = b[b.length-2];
-				b[b.length-2] = temp;
-			}
-		}
-		System.out.println(maxNum2);
-		System.out.println(num);
-		System.out.println(Arrays.toString(b));
+		
 	}
 
 }
