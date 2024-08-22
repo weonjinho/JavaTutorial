@@ -6,6 +6,11 @@ import java.util.Scanner;
 
 public class WordList4 {
 
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Random r = new Random();
@@ -24,7 +29,6 @@ public class WordList4 {
 			sc.nextLine();
 			// 한글 단어 리스트:
 			for(int j = 0; j < 3; j++) {
-				
 				String[] wordList = {
 						"연못", "강물", "해변", "고요", "바위", "은하수", "산길", "낙엽", "그림자", "사랑",
 						"파랑", "노래", "봄바람", "눈꽃", "별빛", "바람결", "햇빛", "하얀", "푸른", "가슴",
@@ -49,7 +53,7 @@ public class WordList4 {
 				// 인덱스 값으로 사용할 랜던 숫자 생성.
 				int rIndex = r.nextInt(wordList.length-1);
 				String word1Before = wordList[rIndex];	// 결합할 문자열의 한글 부분. (랜던으로 가져온 문자.)
-				System.out.println("연습할 문자는: "+word1Before+" 입니다.");
+				System.out.println("연습 문자: "+word1Before);
 				// 입력전 시간 받아오기.
 				long beforeTime = System.currentTimeMillis(); //코드 실행 전에 시간 받아오기
 				// 사용자 입력.
@@ -60,35 +64,46 @@ public class WordList4 {
 				System.out.println("입력시간(s) : "+secDiffTime);
 				String koreanPart = "";					// 사용자 입력 한글 문자열 저장 변수. 
 				String sign = "";						// 사용자 입력 특문 문자열 저장 변수.
+				int bonusPointCnt = 0;
+				int pointCnt = 0;
+				System.out.println(ANSI_RED+word1Before+ ANSI_RESET);
 				// 한글과 특수문자 분리.
 				for(int i=0;i<userInputTxt.length();i++) {
 					char text=userInputTxt.charAt(i);
 					if((int)text < 127) {
 						sign += text;			// 사용자 입력 특수문자 저장.
+						System.out.println(ANSI_RED+sign+ ANSI_RESET);
+//						if(sign.equals(word2Before)) {				// 정답일때.
+////							pointCnt=5;	
+//							signPointCnt += (sign.length())*1;
+//							pointCnt = signPointCnt;
+//							System.out.println(bonusPointCnt);
+//						}else {										// 오답일때.
+////							pointCnt=0;
+//							for(int w=0;w<word2Before.length();w+=) {
+//								
+//							}
+//						}
 					}else {
 						koreanPart += text;		// 사용자 입력  한글 저장.
+						if(koreanPart.equals(word1Before)) {		// 정답일때.
+							pointCnt=5;	
+						}else {										// 오답일때.
+							pointCnt=0;
+						}
 					}
 				}
-				// 분리된 값을 따로 저장.
-				System.out.println("사용자가 입력한 특수문자: "+sign);
-				System.out.println("사용자가 입력한 한글: "+koreanPart);
 				// 오타가 존제 여부를 기준으로 점수 측정.
 				// 오타 >=1, 이 문제에 점수는 0점.
-				int pointCnt = 0;
-				if(koreanPart.equals(word1Before)) {
-					pointCnt=3;	
-				}else {					
-					pointCnt=0;
-				}
-//				for(int i=0;i<koreanPart.length();i++) {
-//					if( koreanPart.charAt(i)== word1Before.charAt(i)) {
-//					}else {
-//					}
-//				}
+				
+		
 				userPoint[q] += pointCnt;				// 문자당 정답시 받는 점수.
-				System.out.println("이 문제의 점수: "+pointCnt+" 점");
-				System.out.println("지금까지 "+userArray[q]+" 님이 확득한 점수는: "+userPoint[q]+" 점입니다.");
+				System.out.println("획득 점수: "+pointCnt+" 점");
+				System.out.println(userArray[q]+" 님의 총 확득 점수: "+userPoint[q]);
+				System.out.println();
 			}
+			System.out.println("******* 다음 플레이어 차례입니다. *******");
+			System.out.println();
 		}
 	}
 

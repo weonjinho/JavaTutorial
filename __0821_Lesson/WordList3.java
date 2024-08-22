@@ -49,31 +49,31 @@ public class WordList3 {
 		long afterTime = System.currentTimeMillis();
 		long secDiffTime = (afterTime - beforeTime)/1000;
 		System.out.println("입력시간(s) : "+secDiffTime);
-		String koreanPart = "";					// 사용자 입력 한글 문자열 저장 변수. 
-		String sign = "";						// 사용자 입력 특문 문자열 저장 변수.
+//		String koreanPart = "";					// 사용자 입력 한글 문자열 저장 변수. 
+//		String sign = "";						// 사용자 입력 특문 문자열 저장 변수.
 		// 한글과 특수문자 분리.
-		for(int i=0;i<userInputTxt.length();i++) {
-			char text=userInputTxt.charAt(i);
-			if((int)text < 127) {
-				sign += text;			// 사용자 입력 특수문자 저장.
-			}else {
-				koreanPart += text;		// 사용자 입력  한글 저장.
-			}
-		}
+//		for(int i=0;i<userInputTxt.length();i++) {
+//			char text=userInputTxt.charAt(i);
+////			if((int)text < 127) {
+////				sign += text;			// 사용자 입력 특수문자 저장.
+////			}else {
+////				koreanPart += text;		// 사용자 입력  한글 저장.
+////			}
+//		}
 		// 분리된 값을 따로 저장.
-		System.out.println("사용자가 입력한 특수문자: "+sign);
-		System.out.println("사용자가 입력한 한글: "+koreanPart);
+//		System.out.println("사용자가 입력한 특수문자: "+sign);
+		System.out.println("사용자가 입력한 한글: "+userInputTxt);
 		// 오타가 존제 여부를 기준으로 점수 측정.
 		// 오타 >=1, 이 문제에 점수는 0점.
 		int pointCnt = 0;
 		int roundPointCnt = 0;
-		for(int i=0;i<koreanPart.length();i++) {
-			if( koreanPart.charAt(i)== word1Before.charAt(i)) {
-				pointCnt=3;
-			}else {
-				pointCnt=0;
-			}
+		if( userInputTxt.equals(word1Before)) {
+			pointCnt+=5;
+		}else {
+			pointCnt=0;
 		}
+//		for(int i=0;i<userInputTxt.length();i++) {
+//		}
 		roundPointCnt += pointCnt;				// 문자당 정답시 받는 점수.
 		System.out.println("이 문제의 점수: "+pointCnt+" 점");
 	}
