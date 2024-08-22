@@ -10,6 +10,7 @@ public class miniProject_weon {
 		Scanner in = new Scanner(System.in);
 		System.out.println("환영합니다.");
 		System.out.println("게임을 플레이 할 인원수를 설정해주세요.  (숫자 입력)");
+		// 사용자 인원수 입력 받기.
 		int userCnt = in.nextInt();
 		in.nextLine();
 		String[] userId = new String[userCnt]; // 아이디를 저장할 배열
@@ -19,18 +20,21 @@ public class miniProject_weon {
 		double[] userSpeedScore = new double[userCnt]; // 속도 점수
 		double[] userCorrectScore = new double[userCnt]; // 정확도 점수
 		double[] userTotalScore = new double[userCnt]; // 총 점수를 저장할 배열
+		// 게임 난이도 선택.
 		System.out.println("난이도 선택:");
 		System.out.println("1번 기본 / 2번 심화");
 		int level=in.nextInt();
 		in.nextLine();
+		
+		// 메인 게임(사용자 마다 반복할 부분.)
 		for(int i = 0; i < userCnt; i++) {
 			int missCnt = 0; // 오답 카운트
 			int score = 0; // 기본 점수
-			
 			String accTxt = "";
 			double questionCnt = 0;
 			double accSpeed = 0;
 			System.out.println((i+1) + "번째 ID를 입력해주세요");
+			// 
 			userId[i] = in.nextLine();
 			String[] korArr = {
 					"연못", "강물", "해변", "고요", "바위", "은하수", "산길", "낙엽", "그림자", "사랑",
@@ -54,8 +58,7 @@ public class miniProject_weon {
 			};
 			
 
-
-//		System.out.println(Arrays.toString(signArr));
+			// 원진호
 			for(int j = 0; j < 5; j++) {
 				
 				String korWord = ""; // korArr에서 무작위로 받을 값
@@ -74,14 +77,14 @@ public class miniProject_weon {
 				questionCnt++;
 				accSpeed += secDiffTime;
 				accTxt += gameTxt;
-				
+				// 
 				if(userTxt.equals(gameTxt)) {
 					score += 10;
 				}else {
 					missWord = "";
 					score += 0;
 				}
-				// 20240822_정지용_오답 개수 카운트
+				// 
 				for(int k = 0; k < gameTxt.length(); k++) {
 					if(userTxt.charAt(k) != gameTxt.charAt(k)) {
 						missCnt++;
@@ -99,65 +102,65 @@ public class miniProject_weon {
 			
 		}
 		// 타자속도 점수 환산
-				for(int i = 0; i < userCnt; i++) {
-					if(userSpeed[i] < 2) {
-						userSpeedScore[i] = 100 * 0.2;
-					}else if(userSpeed[i] < 4) {
-						userSpeedScore[i] = 80 * 0.2;
-					}else if(userSpeed[i] < 6) {
-						userSpeedScore[i] = 60 * 0.2;
-					}else if(userSpeed[i] < 8) {
-						userSpeedScore[i] = 40 * 0.2;
-					}else if(userSpeed[i] < 10) {
-						userSpeedScore[i] = 20 * 0.2;
-					}else {
-						userSpeedScore[i] = 0;
-					}
-				}
-				// 정확도 점수 환산
-				for(int i = 0; i < userCnt; i++) {
-					userCorrectScore[i] = Math.round((userCorrect[i] * 0.3) * 10) / 10.0;
-				}
-				// 총점 입력 
-				for(int i = 0; i < userCnt; i++) {
-					userTotalScore[i] = Math.round(((userPoint[i] * 0.5) + userSpeedScore[i] + userCorrectScore[i]) * 100) / 100.0;			
-				}
-				// 20240822_정지용_순위를 매기기 위한 반복문
-				int [] ranking = new int[userCnt];
-				double max_num = 0;
-				int max_index = 0;
-				int x = 0;
-				for(int i = 0; i < userCnt; i++) {
-					if(userTotalScore[i] > max_num) {
-						max_num = userTotalScore[i];
-						max_index = i;
-					}
-					if(i == userCnt - 1) {
-						ranking[x] = max_index;
-						userTotalScore[max_index] = 0;
-						max_num = 0;
-						max_index = 0;
-						x++;
-						i = -1;
-					}
-					if(x == userCnt) {
-						break;
-					}
-				}
+		for(int i = 0; i < userCnt; i++) {
+			if(userSpeed[i] < 2) {
+				userSpeedScore[i] = 100 * 0.2;
+			}else if(userSpeed[i] < 4) {
+				userSpeedScore[i] = 80 * 0.2;
+			}else if(userSpeed[i] < 6) {
+				userSpeedScore[i] = 60 * 0.2;
+			}else if(userSpeed[i] < 8) {
+				userSpeedScore[i] = 40 * 0.2;
+			}else if(userSpeed[i] < 10) {
+				userSpeedScore[i] = 20 * 0.2;
+			}else {
+				userSpeedScore[i] = 0;
+			}
+		}
+		// 정확도 점수 환산
+		for(int i = 0; i < userCnt; i++) {
+			userCorrectScore[i] = Math.round((userCorrect[i] * 0.3) * 10) / 10.0;
+		}
+		// 총점 입력 
+		for(int i = 0; i < userCnt; i++) {
+			userTotalScore[i] = Math.round(((userPoint[i] * 0.5) + userSpeedScore[i] + userCorrectScore[i]) * 100) / 100.0;			
+		}
+		// 20240822_정지용_순위를 매기기 위한 반복문
+		int [] ranking = new int[userCnt];
+		double max_num = 0;
+		int max_index = 0;
+		int x = 0;
+		for(int i = 0; i < userCnt; i++) {
+			if(userTotalScore[i] > max_num) {
+				max_num = userTotalScore[i];
+				max_index = i;
+			}
+			if(i == userCnt - 1) {
+				ranking[x] = max_index;
+				userTotalScore[max_index] = 0;
+				max_num = 0;
+				max_index = 0;
+				x++;
+				i = -1;
+			}
+			if(x == userCnt) {
+				break;
+			}
+		}
 //				System.out.println(Arrays.toString(ranking)); // 랭킹 확인
-				// 0으로 만들어놓은 총점을 다시 원상복구 작업
-				for(int i = 0; i < userCnt; i++) {
-					userTotalScore[i] = Math.round(((userPoint[i] * 0.5) + userSpeedScore[i] + userCorrectScore[i]) * 100) / 100.0;			
-				}
-				// 결과
-				System.out.println("총점은 (점수 + 속도 + 정확도)의 환산값 입니다.");
-				System.out.println("이름   총점   점수   속도   정확도");
-				System.out.println("---------------------------");
-				for(int i = 0; i < userCnt; i++) {			
-					System.out.println(userId[ranking[i]] + "   " + userTotalScore[ranking[i]] + 
-							"  " + userPoint[ranking[i]] + "   " + userSpeed[ranking[i]] + 
-							"   " + userCorrect[ranking[i]]);
-				}
+		// 0으로 만들어놓은 총점을 다시 원상복구 작업
+		for(int i = 0; i < userCnt; i++) {
+			userTotalScore[i] = Math.round(((userPoint[i] * 0.5) + userSpeedScore[i] + userCorrectScore[i]) * 100) / 100.0;			
+		}
+		// 결과
+		System.out.println("총점은 (점수 + 속도 + 정확도)의 환산값 입니다.");
+		System.out.println("이름   총점   점수   속도   정확도");
+		System.out.println("---------------------------");
+		for(int i = 0; i < userCnt; i++) {			
+			System.out.println(userId[ranking[i]] + "   " + userTotalScore[ranking[i]] + 
+					"  " + userPoint[ranking[i]] + "   " + userSpeed[ranking[i]] + 
+					"   " + userCorrect[ranking[i]]);
+		}
 	}
 }
 
