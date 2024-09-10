@@ -1,8 +1,16 @@
-# 수업진도
-### 프론트엔트
-1. HTML/CSS
-2. 부트스트립
-3. Javascript
-### 백엔트
-1. 자바
+1. 자바   
 
+![](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=OpenJDK&logoColor=white")
+
+사용중인 JDK:
+
+Java 8 for Windows
+
+설치 링크:
+
+https://www.oracle.com/kr/java/technologies/downloads/#java8-windows
+
+
+
+
+    
