@@ -16,40 +16,41 @@ public class mission06 {
 		  
 //		  행을 내림차순으로 정렬한다
 //		  최대값의 index번호를 저장할 변수.
-//	      int maxNumIndex = 0;
-//	      for(int i=0;i<a.length;i++) {
-//	         for(int j=0;j<a[i].length;j++) {
-//	            for(int k=0;k<a[i].length;k++) {
-//	               maxNumIndex = 0;
-//	               for(int x=0;x<a[i].length-k;x++) {
-//	                  if(a[i][maxNumIndex]>a[i][x]) {
-//	                     maxNumIndex = x;
-//	                  }
-//	                  int temp = a[i][a[i].length-1-k];
-//	                  a[i][a[i].length-1-k] = a[i][maxNumIndex];
-//	                  a[i][maxNumIndex] = temp;
-//	               }
-//	            }
-//	         }
-//	      }
-//	      int maxNumIndex2 = 0;
-//	      for(int i=0;i<a.length;i++) {
-//	         for(int j=0;j<a[i].length;j++) {
-//	            for(int k=0;k<a[j].length;k++) {
-//	               maxNumIndex2 = 0;
-//	               for(int x=0;x<a[j].length-k;x++) {
-//	                  if(a[maxNumIndex2][j] > a[x][j]) {
-//	                     maxNumIndex2 = x;
-//	                  }
-//	                  int temp = a[a[i].length-1-k][j];
-//	                  a[a[i].length-1-k][j] = a[maxNumIndex2][j];
-//	                  a[maxNumIndex2][j] = temp;
-//	               }
-//	            }
-//	         }
-//	      }
-//	      System.out.println(Arrays.deepToString(a));
-
+	      int maxNumIndex = 0;
+	      for(int i=0;i<a.length;i++) {
+	         for(int j=0;j<a[i].length;j++) {
+	            for(int k=0;k<a[i].length;k++) {
+	               maxNumIndex = 0;
+	               for(int x=0;x<a[i].length-k;x++) {
+	                  if(a[i][maxNumIndex]>a[i][x]) {
+	                     maxNumIndex = x;
+	                  }
+	                  int temp = a[i][a[i].length-1-k];
+	                  a[i][a[i].length-1-k] = a[i][maxNumIndex];
+	                  a[i][maxNumIndex] = temp;
+	               }
+	            }
+	         }
+	      }
+	      int maxNumIndex2 = 0;
+	      for(int i=0;i<a.length;i++) {
+	         for(int j=0;j<a[i].length;j++) {
+	            for(int k=0;k<a[j].length;k++) {
+	               maxNumIndex2 = 0;
+	               for(int x=0;x<a[j].length-k;x++) {
+	                  if(a[maxNumIndex2][j] > a[x][j]) {
+	                     maxNumIndex2 = x;
+	                  }
+	                  int temp = a[a[i].length-1-k][j];
+	                  a[a[i].length-1-k][j] = a[maxNumIndex2][j];
+	                  a[maxNumIndex2][j] = temp;
+	               }
+	            }
+	         }
+	      }
+	      System.out.println(Arrays.deepToString(a));
 	}
 
+	
+	
 }
