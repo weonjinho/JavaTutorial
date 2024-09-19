@@ -34,7 +34,7 @@
     고양이는 이름과 나이와 정보 보는 가능이 있다.
     고양이를 등록, 수정, 삭제, 리스트보기 기능이 있다.
 
-## 시나리오
+## 시나리오 분석
     시나리오가 있을때 먼저 클래스를 설계한다.
     * 첫번째 클래스는 시작을 알리는 클래스.
     * 두번째 클래스는 고양이를 등록, 수정, 삭제, 리스트보기 기능이 있는 관리 클래스.
@@ -78,20 +78,21 @@ public class Cat_m {
 			in.nextLine();
 			System.out.println(selNum + "을 선택함");
 			if(selNum == 1) {
-				add();	//메소드 호출
+				add();	//등록 기능 메소드 호출
 			}else if(selNum == 2) {
 				
 			}else if(selNum == 3) {
 				
 			}else if(selNum == 4) {
-				allList();	//메소드호출
+				allList();	//전체 리스트 보기 기능 메소드호출
 			}else {
 				break;
 			}
 		}
 		
 	}
-	
+
+	//등록 기능 메소드
 	public void add() {	//메소드 정의
 		//클래스 내부에 선언한 변수를 지역변수.
 		//클래스가 종료되면 변수는 사라진다...
@@ -103,17 +104,18 @@ public class Cat_m {
 		for(int i=0;i<clist.length;i++) {
 			if(clist[i] == null) {
 				clist[i] = cat;
-				break;
+				break;	//break문 없으면 배열속 모든 칸에 같은 값으로 채워질것이다.
 			}
 		}
 	}
-	
-	//고양이 전체 정보 보기.
+
+
+	//전체 리스트 내용 확인 기능 메소드
 	public void allList() {	//메소드 정의
 		System.out.println("고양이 전체 보기");
 		for(int i=0;i<clist.length;i++) {
 			if(clist[i] != null) {
-				clist[i].prt();
+				clist[i].prt();	//리스트속 모든 고양이의 정보를 출력합으로, break문을 사용할 필요없다.
 			}
 		}
 		
@@ -126,12 +128,12 @@ public class Cat_m {
 ```java
 //한마리 고양이에 대한 단일 책임의 클래스 정의.
 public class Cat_Obj {
-	String name = null;
-	int age = 0;
-	public void prt() {
+	String name = null;	//맴버변수
+	int age = 0;		//맴버변수
+	public void prt() {	//필요한 정보를 출력하는 메소드.
 		System.out.println("--- cat info ---");
-		System.out.println(name);
-		System.out.println(age);
+		System.out.println(name);	//고양이 이름
+		System.out.println(age);	//고양이 나이
 	}
 }
 ```
