@@ -5,7 +5,7 @@ import java.util.Scanner;
 //고양이 관리 단일 책임을 부여 함.(전체 고양이 리스트 관리***)
 public class Cat_m {
 	// 클래스 바로 안쪽이라서 멤버변수라고 합니다.
-	//<span style="color:red"> 여기서 선언한 이유는 클래스 내부 어느곳에서든 참조가능. </span> 
+	// 여기서 선언한 이유는 클래스 내부 어느곳에서든 참조가능. 
 	Cat_Obj[] clist = new Cat_Obj[5]; //5마리 고양이의 정보까지 입력할수 있다.
 	Scanner in = new Scanner(System.in);
 	Cat_m(){
