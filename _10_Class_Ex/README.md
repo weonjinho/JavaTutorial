@@ -27,7 +27,7 @@
 
     참조변수에 저장한것은 주소지 실재 값이 아니다!
 
-    <span style="color:red">red</span>
+    <span style = "color:red">빨간 글씨</span>
 
     실제값은 메모리 힙 영역에 저장되어 있고 그 주소값을 참조변수가 가지고 있을 뿐이다!
     
