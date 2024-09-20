@@ -1,7 +1,7 @@
 package _10_Class_mission;
 
 
-public class Car_Obj {
+public class CarOne {
 	String carNum = null;
 	String ownerName = null;
 	public void prt() {

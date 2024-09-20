@@ -3,16 +3,12 @@ package _10_Class_mission;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Car_m {
-	Car_Obj[] carList = new Car_Obj[7]; // 7대 까지 등록 가능.
+public class CarCenter {
+	CarOne[] carList = new CarOne[7]; // 7대 까지 등록 가능.
 	Scanner in = new Scanner(System.in);
-	Car_m(){
+	CarCenter(){
 		while(true) {
-			System.out.println("자동차 관리");
-			System.out.println("1.등록");
-			System.out.println("2.조회");
-			System.out.println("3.삭제");
-			System.out.println("4.전체보기");
+			menu();
 			System.out.println(" 선택 >>");
 			int selNum = in.nextInt();
 			in.nextLine();
@@ -30,9 +26,17 @@ public class Car_m {
 			}
 		}
 	}
+	
+	public void menu() {
+		System.out.println("1.등록");
+		System.out.println("2.조회");
+		System.out.println("3.삭제");
+		System.out.println("4.전체보기");
+	}
+	
 	public void add() {
 		System.out.println("등록");
-		Car_Obj car = new Car_Obj();
+		CarOne car = new CarOne();
 		System.out.println("차량 번호 입력");
 		car.carNum = in.nextLine();
 		System.out.println("소유자 정보 입력");
