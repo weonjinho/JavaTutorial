@@ -1,5 +1,5 @@
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=객체_02&fontSize=70" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:ed9d0b,100:f94001&height=200&section=header&text=객체_02&fontSize=70" />
 
 # 객체 수업 노트_02
 ### 코드 분석 방법
@@ -31,7 +31,7 @@
 
       마지막으로 "Cat_Obj[5]" 가 있습니다.
       이는 생성자 입니다.
-      앞서 말씀 드렀다 십히, 이 코드는 객체를 생성하는 코드입니다.
+      앞서 말씀 드렸다 싶이, 이 코드는 객체를 생성하는 코드입니다.
       객체를 생성하려면 "new" 연산자를 사용합니다.
       "new" 연산자로 객체를 만들때는 생성자로 만듭니다. ***
       이 배열은 Cat_Obj객체의 주소값을 저장하는데 사용되며, 
@@ -106,7 +106,7 @@
 ### 스텍 & 큐
       스택은 선행 자료 구조의 한 종류로, 후입선출(LIFO, Last In First Out)원칙에 따라         작동하는 데이터 구조이다.
       큐는 선형 자료 구조의 또 다른 종류로, 선업선출(FIFO, First In Last Out)의 원칙을 따른다. 즉 가장 먼저 삽인된 요소가 가장 먼저 제거된다. 
-
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ed9d0b,100:f94001&height=100&section=footer&fontSize=70"/>
 
 
 
