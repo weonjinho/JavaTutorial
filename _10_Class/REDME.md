@@ -1,3 +1,6 @@
+
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=객체_02&fontSize=70" />
+
 # 객체 수업 노트_02
 ### 코드 분석 방법
       Cat_Obj[]      clist      =      new    Cat_Obj[5];
