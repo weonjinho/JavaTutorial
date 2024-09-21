@@ -154,7 +154,7 @@ public class Cat_Obj {
     1. 시작하는 클래스.
     2. 전체 리스트를 관리하는 클래스.
     3. 한 마리 고양이의 정보를 관리하는 클래스.
-
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ed9d0b,100:f94001&height=100&section=footer&fontSize=70"/>
  
 
 
