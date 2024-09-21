@@ -1,4 +1,5 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:ed9d0b,100:f94001&height=200&section=header&text=객체_01&fontSize=70" />
+
 # 객체 수업 노트01
 ## 필수 암기 내용
 
