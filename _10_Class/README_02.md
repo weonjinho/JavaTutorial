@@ -105,7 +105,8 @@
 ### 스텍 & 큐
       스택은 선행 자료 구조의 한 종류로, 후입선출(LIFO, Last In First Out)원칙에 따라 작동하는 데이터 구조입니다.
       큐는 선형 자료 구조의 또 다른 종류로, 선업선출(FIFO, First In Last Out)의 원칙을 따른다. 즉 가장 먼저 삽인된 요소가 가장 먼저 제거된다. 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ed9d0b,100:f94001&height=100&section=footer&fontSize=70"/>
+      
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ed9d0b,100:f94001&height=200&section=footer&fontSize=70"/>
 
 
 
