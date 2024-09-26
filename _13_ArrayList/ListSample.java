@@ -7,6 +7,7 @@ public class ListSample {
 	ArrayList<String> a = new ArrayList<>();
 	
 	public ListSample(){
+		
 		a.add("apple"); //ArrayList 에 값 추가하는 메소드.
 		a.add("banana");
 		a.add("abc 초코렛");
