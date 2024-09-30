@@ -4,6 +4,7 @@
 
     구성 : 클래스는 멤버변수랑 메소드로 구성되었습니다.
 
+    Java Project ---> bin & src ---> package ( 페키지 ) ---> class ( 클래스 )
 ### bin/src
     bin : binary ( 2진수 )확장자. ( *.class )
     src : source 확장자. 실제 작성한 코드가 위치한 곳. ( *.java )
