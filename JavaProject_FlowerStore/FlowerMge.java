@@ -41,9 +41,6 @@ public class FlowerMge {
 		FlowerOne flower = new FlowerOne();
 		Scanner in = new Scanner(System.in);
 		//꿏 이름
-//		System.out.println("등록할 꽃의 이름을 입력하세요.");
-//		String inputName = in.nextLine();
-//		flower.setfName(inputName);
 		String inputName = null;
 		while(true) {
 			System.out.println("등록할 꽃의 이름을 입력하세요.");
@@ -58,9 +55,6 @@ public class FlowerMge {
 		
 		
 		//개화시기
-//		System.out.println("등록할 꽃의 개화시기를 입력하세요.");
-//		String inputFSeason = in.nextLine();
-//		flower.setfSeason(inputFSeason);
 		String inputFSeason = null;
 		while(true) {
 			System.out.println("등록할 꽃의 개화시기를 입력하세요.");
@@ -73,11 +67,8 @@ public class FlowerMge {
 			}
 		}
 		
-		
+
 		//품종
-//		System.out.println("등록할 꽃의 품종를 입력하세요.");
-//		String inputFKind = in.nextLine();
-//		flower.setfKind(inputFKind);
 		String inputFKind = null;
 		while(true) {
 			System.out.println("등록할 꽃의 품종를 입력하세요.");
@@ -92,9 +83,6 @@ public class FlowerMge {
 		
 
 		//꽃 소개글
-//		System.out.println("등록할 꽃의 소개글를 입력하세요.");
-//		String inputFIntro  = in.nextLine();
-//		flower.setfIntro(inputFIntro);
 		String inputFIntro = null;
 		while(true) {
 			System.out.println("등록할 꽃의 소개글를 입력하세요.");
@@ -109,9 +97,6 @@ public class FlowerMge {
 		
 		
 		//입고날짜
-//		System.out.println("등록할 꽃의 입고날짜를 입력하세요.");
-//		String inputFInDate = in.nextLine();
-//		flower.setInDate(inputFInDate);
 		String inputFInDate = null;
 		while(true) {
 			System.out.println("꽃의 입고날짜 정보을 입력하세요.(예:0927)");
@@ -125,12 +110,7 @@ public class FlowerMge {
 		}
 		
 		
-		
 		//화기(유효기간)
-//		System.out.println("등록할 꽃의 화기를 입력하세요.");
-//		int inputFKeepDate = in.nextInt();
-//		in.nextLine();
-//		flower.setKeepDate(inputFKeepDate);
 		int inputFKeepDate = 0;
 		while(true) {
 			System.out.println("등록할 꽃의 화기를 입력하세요.(1~30일까지 입력가능.)");
@@ -143,8 +123,6 @@ public class FlowerMge {
 				break;
 			}
 		}
-		
-		
 
 		//현재날짜
 		String nowDate = flower.calNowDate();
@@ -164,6 +142,17 @@ public class FlowerMge {
 		int cntTrashFlower = flower.calTrashFlower(nowDate, newFDropDate);//페기할 꽃 count.
 		System.out.println("페기할 꽃의 갯수: "+ cntTrashFlower);
 		flower.setTrashFlower(cntTrashFlower);
+		
+		
+		//재고수량
+		int inputFStock = 0;
+		while(true) {
+			inputFStock=flower.stockNum(flower.fStock, cntTrashFlower);
+			System.out.println("현재 재고 수량입니다.: "+inputFStock);
+			flower.setfStock(inputFStock);
+			break;
+		}
+		
 		
 		//배열의 저장.
 		fList.add(flower);
@@ -207,9 +196,6 @@ public class FlowerMge {
 		String fName = in.nextLine();
 		int idx = findIdx(fName);
 		if(idx != -1) {
-//			System.out.println("수정된 꽃의 이름을 입력하세요.");
-//			String newFName = in.nextLine();
-//			fList.get(idx).setfName(newFName);
 			String newFName = null;
 			while(true){
 				System.out.println("수정된 꽃의 이름을 입력하세요.");
@@ -222,12 +208,6 @@ public class FlowerMge {
 					break;
 				}
 			}
-			
-			
-
-//			System.out.println("수정된 꽃의 품종을 입력하세요.");
-//			String newFKind = in.nextLine();
-//			fList.get(idx).setfKind(newFKind);
 			
 			String newFKind = null;
 			while(true) {
@@ -242,11 +222,6 @@ public class FlowerMge {
 				}
 			}
 			
-
-//			System.out.println("수정된 꽃의 설명글을 입력하세요.");
-//			String newFIntro = in.nextLine();
-//			fList.get(idx).setfIntro(newFIntro);
-			
 			String newFIntro = null;
 			while(true) {
 				System.out.println("수정된 꽃의 설명글을 입력하세요.");
@@ -259,13 +234,7 @@ public class FlowerMge {
 					break;
 				}
 			}
-			
 
-
-			
-//			System.out.println("수정된 꽃의 입고날짜 정보을 입력하세요.(예:0927)");
-//			String newFInDate = in.nextLine();
-//			fList.get(idx).setInDate(newFInDate);
 			String newFInDate = null;
 			while(true) {
 				System.out.println("수정된 꽃의 입고날짜 정보을 입력하세요.(예:0927)");
@@ -277,15 +246,6 @@ public class FlowerMge {
 					break;
 				}
 			}
-			
-			
-			
-			
-			
-//			System.out.println("수정된 꽃의 회기을 입력하세요.");
-//			int newFKeepDate = in.nextInt();
-//			in.nextLine();
-//			fList.get(idx).setKeepDate(newFKeepDate);
 			
 			int newFKeepDate = 0;
 			while(true) {
@@ -300,28 +260,14 @@ public class FlowerMge {
 					break;
 				}
 			}
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
 			String newFDropDate = flower.dropDateCal(newFInDate,  newFKeepDate);
 			System.out.println("등록한 날짜: "+newFInDate);
 			System.out.println("유효기간: "+newFKeepDate);
 			System.out.println("페기날짜: "+newFDropDate);
 			fList.get(idx).setDropDate(newFDropDate);
 			
-			
-			
-			
 		}
 	}
-	
 
 	//검색 메소드
 	public int findIdx(String fName) { 
