@@ -27,10 +27,36 @@ public class MainMenu {
 			}else if(num == 2) {
 				part.menu();
 			}else if(num == 3) {
-				
+				loginProcess();
 			}else {
 				break;
 			}
 		}
 	}
+	private void loginProcess() {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		System.out.println("로그인 하세요<id입력>");
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
