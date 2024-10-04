@@ -49,9 +49,6 @@ public class JoinMge {
 		jList.add(j);
 	}
 	public void allMemberList() {
-//		for(JoinOne a:jList) {
-//			a.prt();
-//		}
 		for(int i=0;i<jList.size();i++) {
 			jList.get(i).prt();
 		}

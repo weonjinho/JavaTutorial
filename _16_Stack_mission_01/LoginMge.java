@@ -7,7 +7,7 @@ public class LoginMge {
 //	private ArrayList<JoinOne> jList = new ArrayList<JoinOne>();
 	JoinMge j = null;
 	LoginMge(){
-		menu();
+//		menu();
 	}
 	public void menu() {
 		Scanner in = new Scanner(System.in);
@@ -27,10 +27,6 @@ public class LoginMge {
 		Scanner in = new Scanner(System.in);
 //		JoinOne j = new JoinOne();		
 		System.out.println("--- 현재 회원 리스트 ---");
-//		for(JoinOne a : jList) {
-//			a.prt();
-//		}
-		
 		for(int i=0;i<j.jList.size();i++) {
 			j.jList.get(i).prt();
 		}

@@ -11,12 +11,7 @@ public class MainMenu {
 		}
 		if(login == null) {
 			login = new LoginMge();
-			
-			
 		}
-		
-		login.j = join;
-		
 		menu();
 	}
 	public void menu() {
@@ -34,8 +29,7 @@ public class MainMenu {
 				 join.menu();
 			}else if(selNum == 2) {
 				//로그인 클래스
-				LoginMge l = new LoginMge();
-				l.menu();
+				login.menu();
 			}else if(selNum == 3) {
 				//학생관리 클래스
 			}else if(selNum == 4) {
